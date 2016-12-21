@@ -36,7 +36,7 @@ function preparePage() {
     }
 
     if( $('.slider-wrap').length > 0) {
-        $('.slick').owlCarousel({
+        $('.slider-wrap').slick({
            dots: true,
            inifinite: true,
            speed: 600
