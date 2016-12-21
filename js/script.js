@@ -21,14 +21,6 @@ function preparePage() {
 			var object = new F;
 			return object;
 		}
-
-		sliderChild.prototype = inherit(slider.prototype);
-		var s = new sliderChild({slider     : '.content-slider', 
-                                 item       : '.slider-item',
-                                 pagination : '.slider-pages',
-                                 timer      : true,
-                                 wrap       : '.slider-wrap' });
-		s.init();
 	}
 
 
@@ -41,6 +33,18 @@ function preparePage() {
     if( $('.content-slider-menu').length > 0){
         app.tour.init();
         chooseTour();
+    }
+
+    if( $('.owl-carousel').length > 0) {
+        $('.owl-carousel').owlCarousel({
+            //loop: true,
+            //autoplay:true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            dots: true,
+            nav:false,
+            items: 1
+        });
     }
 
 }
@@ -63,136 +67,6 @@ function selectActiveMenu() {
     });    
 }
 
-
-/* slider */
-
-function slider(obj) {
-	this.slider         = obj.slider;
-    this.item           = obj.item;
-    this.paginationWrap = obj.pagination;
-    this.timer          = obj.timer;
-    this.wrap           = obj.wrap;
-
-    this._timeout       = null;
-    this._shift         = 0;
-    this._prevIndex     = 0;
-}
-
-slider.prototype._pagination = function() {
-	var length = $(this.item).size(), 
-            html   = '';
-        
-      for(var i = 0; i < length; i += 1) {
-          if( i == 0) {
-              html += '<span class="active"></span>';
-          }  else {
-              html += '<span></span>';
-          }
-          
-      }
-    
-    $(this.paginationWrap).html(html);
-    html = null;
-};
-
-
-slider.prototype._autoSliding = function () {
-	var self = this;
-
-	self._timeout = setTimeout( function slide() {
-		var spans = $(self.paginationWrap + ' span');	
-
-		if( self._shift != $(self.item).length - 1 ) {
-			self._shift += 1;
-			$(self.wrap).css('margin-left', (-1) * $(self.item).width() * self._shift + 'px');
-
-		      if( !$(spans).eq(self._shift).hasClass('active')) {
-		          $('.active').removeClass('active');
-		          $(spans).eq(self._shift).addClass('active');
-		      }
-
-		      if( !$(self.item).eq(self._shift).hasClass('active-item')) {
-		          $('.active-item').removeClass('active-item');
-		          $(self.item).eq(self._shift).addClass('active-item');
-		      }
-    
-		} else if( self._shift == $(self.item).length - 1 ){
-			self._shift = 0;
-
-			$(self.wrap).css('margin-left', 0);
-
-			if( !$(spans).eq(self._shift).hasClass('active')) {
-		        $('.active').removeClass('active');
-		        $(spans).eq(self._shift).addClass('active');
-		     }
-
-		    if( !$(self.item).eq(self._shift).hasClass('active-item')) {
-		        $('.active-item').removeClass('active-item');
-		        $(self.item).eq(self._shift).addClass('active-item');
-		    }
-		}
-
-		self._timeout = setTimeout(slide, 5000);
-
-	}, 5000 );
-};
-
-
-slider.prototype._sliding = function ( elem, index) {
-
-    $(this.wrap).css('margin-left', (-1) * $(this.item).width() * index  + 'px');
-
-
-    if( !$(elem).hasClass('active')) {
-        $('.active').removeClass('active');
-        $(elem).addClass('active');
-    }
-
-    if( !$(this.item).eq(index).hasClass('active-item')) {
-        $('.active-item').removeClass('active-item');
-        $(this.item).eq(index).addClass('active-item');
-    }
-
-    this._prevIndex = index;
-    this._shift = index;  
-}
-
-slider.prototype._initHandlers = function () {
-    var spans = $(this.paginationWrap + ' span'),
-        len   = spans.length,
-        that  = this,
-        i;
-
-    spans.each(function(index) {
-        $(this).on('click', function() {
-            that._sliding( $(this), index );
-        });
-    });  
-
-         
-     $(this.slider).bind({
-     	mouseenter: function() {
-     		clearTimeout(that._timeout );
-     	}, 
-
-   		mouseleave: function() {
-     		that._autoSliding();
-     	}
-    });
-
-}
-
-slider.prototype.init = function() {
-    this._pagination();
-    this._initHandlers();
-
-    if( this.timer) {
-    	this._autoSliding();
-    }
-        
-}; 
-
-/* end slider */
 
 /* callback */
 

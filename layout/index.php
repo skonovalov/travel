@@ -64,8 +64,8 @@
 					</div>
 					<div class="content-slider">
 						<div class="row">
-							<div class="slider-wrap">
-								<div class="slider-item active-item">
+							<div class="owl-carousel slider-wrap">
+								<div class="slider-item item">
 									<div class="slider-item-img">
 										<img src="../images/slider-item01.jpg" alt="slider-item">
 									</div>
@@ -75,7 +75,7 @@
 										<p>Небольшая информация о горячем предложении, несколько слов о самым прекрасном туре, который невозможно пропус</p>
 									</div>
 								</div>
-								<div class="slider-item">
+								<div class="slider-item item">
 									<div class="slider-item-img">
 										<img src="../images/slider-item02.jpg" alt="slider-item">
 									</div>
@@ -85,7 +85,7 @@
 										<p>Небольшая информация о горячем предложении, несколько слов о самым прекрасном туре, который невозможно пропус</p>
 									</div>
 								</div>
-								<div class="slider-item">
+								<div class="slider-item item">
 									<div class="slider-item-img">
 										<img src="../images/slider-item03.jpg" alt="slider-item">
 									</div>
@@ -96,11 +96,6 @@
 									</div>
 								</div>
 							</div>
-							<div class="slider-pages">
-								<span class="selected"></span>
-								<span></span>
-								<span></span>
-							</div>	
 						</div>	
 					</div>
 				</div>	

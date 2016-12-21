@@ -96,10 +96,9 @@ table {
   z-index: 10;
   background: rgba(65,170,73,0.3);
 }
-.popup-callback-inner {
+.popup_same {
   width: 537px;
-  height: 300px;
-  margin-left: 333px;
+  margin: 0 auto;
   margin-top: 60px;
   background: #fff;
   border-radius: 10px;
@@ -107,31 +106,13 @@ table {
   text-align: center;
   position: relative;
 }
-.popup-callback-inner span {
-  display: block;
-  position: absolute;
-  top: 11px;
-  right: 11px;
-  cursor: pointer;
-}
-.popup-callback-inner article {
+.popup_same article {
   font-size: 34px;
   color: #942a8f;
   text-align: center;
 }
-.popup-callback-inner form {
-  margin-top: 30px;
-}
-.popup-callback-inner form input {
-  width: 464px;
-}
-.popup-callback-inner .input {
-  margin-bottom: 15px;
-}
-.popup-callback-inner button {
-  width: 230px;
+.popup_same button {
   height: 41px;
-  margin-top: 7px;
   border: 2px solid #41aa49;
   border-radius: 20px;
   text-align: center;
@@ -148,43 +129,45 @@ table {
   -ms-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
-.popup-callback-inner button:hover {
+.popup_same button:hover {
   border-color: #942a8f;
 }
-.popup-callback-thx {
+.popup_callback {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background: rgba(65,170,73,0.3);
+  height: 300px;
 }
-.popup-thx-inner {
-  width: 537px;
-  height: 212px;
-  margin-left: 333px;
-  margin-top: 60px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 25px 22px;
-  text-align: center;
-  position: relative;
-}
-.popup-thx-inner span {
+.popup_callback span {
   display: block;
   position: absolute;
   top: 11px;
   right: 11px;
   cursor: pointer;
 }
-.popup-thx-inner article {
-  font-size: 34px;
-  color: #942a8f;
-  text-align: center;
+.popup_callback form {
+  margin-top: 30px;
 }
-.popup-thx-inner p {
+.popup_callback form input {
+  width: 464px;
+}
+.popup_callback .input {
+  margin-bottom: 15px;
+}
+.popup_callback button {
+  width: 226px;
+  margin-top: 7px;
+}
+.popup_thx {
+  display: none;
+  height: 212px;
+}
+.popup_thx span {
+  display: block;
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  cursor: pointer;
+}
+.popup_thx p {
   margin: 0 auto;
   margin-top: 35px;
   width: 382px;
@@ -192,39 +175,14 @@ table {
   color: #7a828c;
   margin-bottom: 27px;
 }
-.popup-thx-back {
+.popup_thx button {
   display: block;
-  margin: 0 auto;
-  border: 2px solid #41aa49;
-  border-radius: 20px;
-  text-align: center;
   width: 117px;
-  height: 41px;
+  margin: 0 auto;
   line-height: 37px;
   font-size: 13px;
-  color: #942a8f;
-  cursor: pointer;
-  text-transform: uppercase;
-  -webkit-transition: border 0.3s ease;
-  -moz-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  -ms-transition: border 0.3s ease;
-  transition: border 0.3s ease;
 }
-.popup-thx-back:hover {
-  border-color: #942a8f;
-}
-.popup-tour {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background: rgba(65,170,73,0.3);
-}
-.popup-tour-inner {
+.popup_tour {
   width: 541px;
   height: 800px;
   margin: 0 auto;
@@ -237,13 +195,13 @@ table {
   -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 }
-.popup-tour-inner article {
+.popup_tour article {
   font-size: 34px;
   color: #942a8f;
   text-align: center;
   margin-bottom: 30px;
 }
-.popup-tour-inner select {
+.popup_tour select {
   width: 480px;
   height: 34px;
   padding: 0 13px 0 17px;
@@ -261,30 +219,30 @@ table {
   color: #7a828c;
   line-height: 34px;
 }
-.popup-tour-inner select:nth-child(3) {
+.popup_tour select:nth-child(3) {
   margin-bottom: 10px;
 }
-.popup-tour-inner select:last-child {
+.popup_tour select:last-child {
   margin-bottom: 22px;
 }
-.popup-tour-inner button {
+.popup_tour button {
   margin-top: 28px;
   width: 230px;
   text-transform: uppercase;
 }
-.popup-tour-inner .input {
+.popup_tour .input {
   margin-bottom: 11px;
 }
-.popup-tour-inner .input:nth-child(3) {
+.popup_tour .input:nth-child(3) {
   margin-bottom: 8px;
 }
-.popup-tour-inner .input:nth-child(4) {
+.popup_tour .input:nth-child(4) {
   margin-bottom: 12px;
 }
-.popup-tour-inner .input:nth-child(5) {
+.popup_tour .input:nth-child(5) {
   margin-bottom: 10px;
 }
-.popup-tour-inner .input input {
+.popup_tour .input input {
   width: 100%;
   height: 36px;
   font-size: 16px;
@@ -296,30 +254,30 @@ table {
   border: none;
   outline: none;
 }
-.popup-tour-inner p {
+.popup_tour p {
   font-size: 16px;
   color: #942a8f;
   margin-bottom: 23px;
   text-align: left;
 }
-.popup-tour-inner .tour-p {
+.popup_tour .tour-p {
   padding: 18px 0 15px;
   margin-bottom: 0;
 }
-.popup-tour-inner .podbor-selects {
+.popup_tour .selection-selects {
   padding-bottom: 0;
 }
-.popup-tour-inner .podbor-block {
+.popup_tour .selection-item {
   width: 100%;
 }
-.popup-tour-inner .checkBox {
+.popup_tour .checkBox {
   text-align: left;
   margin-bottom: 12px;
 }
-.popup-tour-inner .checkBox:nth-child(2) {
+.popup_tour .checkBox:nth-child(2) {
   margin-bottom: 15px;
 }
-.popup-tour-inner .checkBox:last-child {
+.popup_tour .checkBox:last-child {
   margin-bottom: 0;
 }
 * {
@@ -858,10 +816,8 @@ form .input-btn input {
   height: 411px;
   overflow: hidden;
 }
-.slider-wrap {
-  width: 20000em;
-}
 .slider-item {
+  position: relative;
   float: left;
   width: 870px;
   height: 411px;
@@ -900,24 +856,23 @@ form .input-btn input {
   font-weight: 300;
   text-shadow: -1px -1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(0,0,0,0.7);
 }
-.slider-pages {
+.owl-dots {
   position: absolute;
-  bottom: 15px;
-  right: 7px;
+  bottom: 20px;
+  left: 0;
   width: 100%;
   text-align: right;
 }
-.slider-pages span {
+.owl-dot {
   display: inline-block;
-  vertical-align: middle;
   width: 10px;
   height: 10px;
-  margin-left: 5px;
   border-radius: 50%;
   background: #41aa49;
+  margin-right: 10px;
   cursor: pointer;
 }
-.slider-pages .active {
+.owl-dot.active {
   background: #fff;
 }
 .advantages {
@@ -2555,6 +2510,18 @@ blockquote {
 .icon {
   display: inline-block;
   vertical-align: middle;
+}
+.icon-close {
+  background-image: url("../images/sprite.png");
+  background-position: -167px -148px;
+  width: 19px;
+  height: 19px;
+}
+.icon-close:hover {
+  background-image: url("../images/sprite.png");
+  background-position: -186px -148px;
+  width: 19px;
+  height: 19px;
 }
 .icon-register {
   background-image: url("../images/sprite.png");

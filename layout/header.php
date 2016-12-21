@@ -8,6 +8,9 @@ echo '<!DOCTYPE html>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.png">
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.green.min.css">
 </head>
 <body>
 <div class="wrapper">
