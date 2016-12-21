@@ -863,19 +863,22 @@ form .input-btn input {
   width: 100%;
   text-align: right;
 }
-.slick-dots margin 0 button {
+.slick-dots li {
+  margin: 0;
+}
+.slick-dots li button {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: #41aa49;
-  margin-right: 10px;
+  margin-right: 5px;
   cursor: pointer;
 }
-.slick-dots margin 0 button:before {
+.slick-dots li button:before {
   content: none;
 }
-.owl-dot.active {
+.slick-dots .slick-active button {
   background: #fff;
 }
 .advantages {
