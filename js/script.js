@@ -35,15 +35,11 @@ function preparePage() {
         chooseTour();
     }
 
-    if( $('.owl-carousel').length > 0) {
-        $('.owl-carousel').owlCarousel({
-            //loop: true,
-            //autoplay:true,
-            autoplayTimeout: 5000,
-            autoplayHoverPause: true,
-            dots: true,
-            nav:false,
-            items: 1
+    if( $('.slider-wrap').length > 0) {
+        $('.slick').owlCarousel({
+           dots: true,
+           inifinite: true,
+           speed: 600
         });
     }
 
