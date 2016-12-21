@@ -3,11 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Ansaguide</title>
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.png">
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
-    <script async>
+    <script defer>
         (function() {
             var link1 = document.createElement('link'),
                 link2 = document.createElement('link');
@@ -16,9 +15,14 @@
             link1.setAttribute('href', 'css/slick.css');
 
             link2.setAttribute('rel', 'stylesheet');
-            link2.setAttribute('href', 'css/slick-theme.css')
+            link2.setAttribute('href', 'css/slick-theme.css');
+
+            document.head.appendChild(link1);
+            document.head.appendChild(link2);
         })();
     </script>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="wrapper">

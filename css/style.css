@@ -863,7 +863,7 @@ form .input-btn input {
   width: 100%;
   text-align: right;
 }
-.slick-dots li button {
+.slick-dots margin 0 button {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -871,6 +871,9 @@ form .input-btn input {
   background: #41aa49;
   margin-right: 10px;
   cursor: pointer;
+}
+.slick-dots margin 0 button:before {
+  content: none;
 }
 .owl-dot.active {
   background: #fff;
