@@ -856,14 +856,14 @@ form .input-btn input {
   font-weight: 300;
   text-shadow: -1px -1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(255,255,255,0.2), 1px 1px 1px rgba(0,0,0,0.7);
 }
-.owl-dots {
+.slick-dots {
   position: absolute;
   bottom: 20px;
   left: 0;
   width: 100%;
   text-align: right;
 }
-.owl-dot {
+.slick-dots li button {
   display: inline-block;
   width: 10px;
   height: 10px;
