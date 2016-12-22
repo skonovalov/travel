@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ansaguide</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.png">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <script async>
+        (function() {
+            var link1 = document.createElement('link'),
+                link2 = document.createElement('link');
+
+            link1.setAttribute('rel', 'stylesheet');
+            link1.setAttribute('href', 'css/slick.css');
+
+            link2.setAttribute('rel', 'stylesheet');
+            link2.setAttribute('href', 'css/slick-theme.css');
+
+            document.head.appendChild(link1);
+            document.head.appendChild(link2);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		<div class="header-bg">
+			<img src="./images/header-bg.png" alt="header-bg">
+		</div>
+		<div class="header-inner container">
+			<div class="row">
+				<div class="header-logo">
+					<a href="index.html">
+						<img src="./images/header-logo.png" alt="logo">
+					</a>
+				</div>
+				<div class="header-login">
+					<form action="">
+						<div class="input">
+							<input type="text" placeholder="Поиск по сайту">
+						</div>
+						<div class="input-btn">
+							<input type="submit" value="">
+						</div>
+					</form>
+					<div class="enter-cabinet">
+						<span class="icon-register"></span>
+						<a href="#">Вход в личный кабинет</a>
+					</div>
+					<div class="callback">
+						<i class="icon icon-phone"></i>
+						<em>Обратный звонок</em>
+					</div>
+				</div>
+				<div class="header-lang">
+					<ul>
+						<li class="selected"><a href="" class="icon-rus"></a></li>
+						<li><a href="" class="icon-spa"></a></li>
+						<li><a href="" class="icon-uk"></a></li>
+						<li><a href="" class="icon-fra"></a></li>
+						<li><a href="" class="icon-ger"></a></li>
+					</ul>
+				</div>
+				<div class="header-phones">
+					<ul>
+						<li><em>Russian number:</em> + 7 (911) 931 88 17</li>
+						<li><em>US number:</em> + 1 (559) 921 87 17</li>
+						<li><em>UK number:</em> + 44 (7937) 26 79 81</li>
+						<li><em>Italian number:</em> + 39 (349) 103 62 55</li>
+						<li><em>Skype:</em> aventura.travel1</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</header>
+	<div class="content">
+		<div class="menu">
+			<ul class="row">
+				<li class="selected"><a href="index.html">home</a></li>
+				<li><a href="about.html">about us</a></li>
+				<li><a href="#">shore exursions</a></li>
+				<li><a href="tours.html">tours</a></li>
+				<li><a href="#">travel info</a></li>
+				<li><a href="#">f.a.q</a></li>
+				<li><a href="#">roll call</a></li>
+				<li><a href="contacts.html">contact us</a></li>
+			</ul>
+		</div>
+		<div class="navigation">
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li>&nbsp; / &nbsp;</li>
+				<li><span>Контакты</span></li>
+			</ul>
+		</div>	
+
+		<div class="container">
+			<h1>Контакты</h1>
+
+			<div class="contacts">
+				<div class="row">
+					<p>If you did not receive our response within 24 hours with our offers for your tour or suggestions to plan your vacation, we highly recommend you:
+					<em>Check your SPAM BOX. </em>
+					</p>
+
+					<h2>Call us for 24 hours 7 days a week:</h2>
+
+				
+					<div class="contacts-left">
+						<ul>
+							<li><span class="icon-rus"></span>Russian number: <em>+ 7 (911) 931 88 17</em></li>
+							<li><span class="icon-us"></span>US number:<em> + 1 (559) 921 87 17</em></li>
+							<li><span class="icon-uk"></span>UK number: <em>+ 44 (7937) 26 79 81</em></li>
+							<li><span class="icon-ita"></span>Italian number: <em>+ 39 (349) 103 62 55</em></li>
+						</ul>
+					</div>
+					<div class="contacts-right">
+						<div class="row">
+							<div class="contacts-right-logo">
+								<span class="icon-contacts-criteria"></span>
+							</div>
+							<div class="contacts-right-text">
+								Our criteria is to answer you in 24 hours.
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+
+
+			<div class="contacts-form">
+				<div class="row">
+					<article>Напишете нам:</article>
+					<form action="">
+						<div class="row">
+							<div class="contacts-form-left">
+								<div class="input">
+									<input type="text" placeholder="Phone" id="contacts-phone" name="contacts-phone">
+								</div>
+								<div class="input">
+									<input type="text" placeholder="Last name" id="contacts-lastname" name="contacts-lastname">
+								</div>
+							</div>
+							<div class="contacts-form-right">
+								<div class="input">
+									<input type="text" placeholder="First name" id="contacts-firstname" name="contacts-firstname">
+								</div>
+								<div class="input">
+									<input type="text" placeholder="Email" id="contacts-email" name="contacts-email">
+								</div>
+							</div>
+						</div>
+						<textarea name="contacts-text" id="contacts-text" ></textarea>
+						<button>отправить заявку</button>
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal">
+		<div class="popup_callback popup_same modal_child">
+			<span class="icon-close modal_close"></span>
+			<article>Заказать обратный звонок</article>
+			<form action="">
+				<div class="input">
+					<input type="text" placeholder="Имя">
+				</div>
+				<div class="input">
+					<input type="text" placeholder="Телефон">
+				</div>
+				<div class="input">
+					<input type="text" placeholder="Email">
+				</div>
+				<button>отправить заявку</button>
+			</form>
+		</div>
+
+	<div class="popup_thx popup_same modal_child">
+		<span class="icon-close modal_close"></span>
+		<article>Спасибо!</article>
+		<p>Спасибо, что заказали обратный звонок. наш менджер свяжется с Вами в течении нескольких минут.</p>
+		<button class="back">назад</button>
+	</div>
+
+
+	<div class="popup_tour modal_child">
+		<span class="icon-close modal_close"></span>
+		<article>Заказать индивидуальный тур</article>
+		<div class="selection-selects">
+			<select name="podbor-transport" id="podbor-transport">
+				<option>Транспорт</option>
+				<option value="Bus">Bus</option>
+				<option value="Boat">Boat</option>
+			</select>
+
+			<select name="podbor-boat" id="podbor-boat">
+				<option>Круизный корабль</option>
+				<option value="Bus">Bus</option>
+				<option value="Boat">Boat</option>
+			</select>
+
+			<select name="podbor-timed" id="podbor-timed">
+				<option>Время отбытия</option>
+				<option value="Bus">Bus</option>
+				<option value="Boat">Boat</option>
+			</select>
+
+			<select name="podbor-timea" id="podbor-timea">
+				<option>Время прибытия</option>
+				<option value="Bus">Bus</option>
+				<option value="Boat">Boat</option>
+			</select>
+		</div>
+
+		<div class="selection-item">
+			<p>Персональные данные:</p>
+			<div class="podbor-inputs">
+				<div class="input">
+					<input type="text" placeholder="Имя" id="podbor-name" name="podbor-name">
+				</div>
+				<div class="input">
+					<input type="text" placeholder="Фамилия" id="podbor-fam" name="podbor-fam">
+				</div>
+				<div class="input">
+					<input type="text" placeholder="Номер паспорта" id="podbor-passport" name="podbor-passport">
+				</div>
+				<div class="input">
+					<input type="text" placeholder="Гражданство по паспорту" id="podbor-graz" name="podbor-graz">
+				</div>
+				<div class="input">
+					<input type="text" placeholder="Дата истечения срока паспорта" id="podbor-date" name="podbor-date">
+				</div>
+				<div class="input">
+					<input type="text" placeholder="Название круизного лайнера" id="podbor-boat_name" name="podbor-boat_name">
+				</div>
+			</div>
+		</div>
+		<div class="selection-item">
+			<p class="tour-p">Оплата:</p>
+			<div class="podbor-checks">
+				<div class="checkBox">
+					<input type="radio" id="podbor-100" name="podbor-oplata" checked="checked">
+					<label for="podbor-100">100% оплата</label>
+				</div>
+				<div class="checkBox">
+					<input type="radio" id="podbor-arrived" name="podbor-oplata"">
+					<label for="podbor-arrived">наличными по прибытию при оплате депозита 20%</label>
+				</div>
+				<div class="checkBox">
+					<input type="radio" id="podbor-after" name="podbor-oplata"">
+					<label for="podbor-after">после согласования с представителем компании</label>
+				</div>
+			</div>
+		</div>
+		<button type="submit">отправить заявку</button>
+	</div>
+</div>
+<footer>
+	<div class="footer-bg">
+		<img src="./images/footer-bg.png" alt="footer-bg">
+	</div>
+	<div class="footer-inner container">
+		<div class="row">
+			<div class="menu">
+				<ul class="row">
+					<li><a href="#">home</a></li>
+					<li><a href="#">about us</a></li>
+					<li><a href="#">shore exursions</a></li>
+					<li><a href="#">tours</a></li>
+					<li><a href="#">travel info</a></li>
+					<li><a href="#">f.a.q</a></li>
+					<li><a href="#">roll call</a></li>
+					<li><a href="#">contact us</a></li>
+				</ul>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-item">
+					<ul>
+						<li>&copy; &laquo; Aventura &raquo;</li>
+						<li>travel Agency in Russia</li>
+						<li>2007 - 2015</li>
+					</ul>
+				</div>
+				<div class="footer-item">
+					<ul>
+						<li><a href="">About us</a></li>
+						<li><a href="">Testimonials</a></li>
+					</ul>
+					<article>shore exursions</article>
+					<ul>
+						<li><a href="">1 day tour</a></li>
+						<li><a href="">2 days tour</a></li>
+						<li><a href="">3 days tour</a></li>
+					</ul>
+				</div>
+				<div class="footer-item">
+					<ul>
+						<li><a href="">Saint-Petersburg tours</a></li>
+						<li><a href="">Moscow tours</a></li>
+						<li><a href="">Moscow and Golden Ring of Russia</a></li>
+						<li><a href="">Tours in Baltic Countries</a></li>
+					</ul>
+				</div>
+				<div class="footer-item">
+					<ul>
+						<li><a href="">Info for travelers</a></li>
+						<li><a href="">Cultural Events</a></li>
+						<li><a href="">St. Petersburg museums</a></li>
+						<li><a href="">Suburbs of Saint-Petersburg</a></li>
+						<li><a href="">Air and rail travelers</a></li>
+						<li><a href="">TOP-10 places to visit</a></li>
+					</ul>
+				</div>
+				<div class="footer-item">
+					<ul>
+						<li><a href="#"><span class="icon-tripadvisor"></a></span></li>
+						<li><a href="#"><span class="icon-google"></a></span></li>
+						<li><a href="#"><span class="icon-facebook"></a></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+	</div>
+</footer>	
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
