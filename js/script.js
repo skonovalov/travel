@@ -82,7 +82,7 @@ app.popup = (function() {
         var self = this;
         console.log(self);
 
-        container.show(function() {
+        container.fadeIn(function() {
             self.name.fadeIn();
         }); 
     };
@@ -90,7 +90,7 @@ app.popup = (function() {
     Popup.prototype.hide = function() {
         var self = this;
 
-        this.name.hide(function() {
+        sel.name.fadeOut(function() {
             container.fadeOut();
         });
     };

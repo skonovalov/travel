@@ -134,7 +134,6 @@ table {
 }
 .popup_callback {
   display: none;
-  height: 300px;
 }
 .popup_callback span {
   display: block;
