@@ -70,52 +70,44 @@ function selectActiveMenu() {
 
 app.popup = (function() {
 
-    function _hideCallback() {
-        $('.popup-callback').fadeOut();
+    var container    = $('.popup'),
+        enterCabinet = $('.enter-cabinet'),
+        callback     = $('.callback');
 
+    function Popup(name) {
+        this.name = $(name);
     }
 
-    function _showCallback() {
-        $('.popup-callback').fadeIn();
-    }
+    Popup.prototype.show = function() {
+        var self = this;
 
-    function _initHandler() {
-        $('.header-login-call').on('click', function() {
-            _showCallback();
+        container.show(function() {
+            self.name.show();
+        }); 
+    };
+
+    Popup.prototype.hide = function() {
+        var self = this;
+
+        this.name.hide(function() {
+            container.hide();
         });
+    };
 
-        $('.popup-callback-inner span').on('click', function() {
-            _hideCallback();
+    function Call() {}
+    Call.prototype = Object.create(Popup.prototype);
+
+
+    var _initHandlers = function() {
+        callback.on('click', function() {
+           var c = new Call( '.popup_callback' );
+           c.show();
         });
-
-        $('.popup-thx-inner span, .popup-thx-back').on('click', function() {
-           _hideCallbackThx();
-        });
-
-        $('.popup-callback-inner button').on('click', function(e) {
-            e.preventDefault();
-
-            _showThx();
-
-        })
-    }
-
-    function _showThx() {
-        _hideCallback();
-        $('.popup-callback-thx').fadeIn();
-    }
-
-    function _hideCallbackThx() {
-        $('.popup-callback-thx').fadeOut();
-
-    }
+    };
 
     return {
-        init: function() {
-            _hideCallback();
-            _initHandler();
-        }
-    }
+        init: _initHandlers
+    };
 
 })();
 
