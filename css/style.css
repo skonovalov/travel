@@ -86,7 +86,7 @@ table {
          url('../fonts/myriad_bold.ttf') format('truetype'),
          url('../fonts/myriad_bold.otf') format('opentype'); 
 }
-.popup {
+.modal {
   display: none;
   position: fixed;
   top: 0;
