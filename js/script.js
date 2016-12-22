@@ -88,10 +88,19 @@ app.popup = (function() {
     };
 
     Popup.prototype.hide = function() {
-        var self = this;
+        $('.modal_close').on('click', function() {
+            $(this).parent.fadeOut(function() {
+                container.fadeOut();
+            });
+        });
 
-        sel.name.fadeOut(function() {
-            container.fadeOut();
+        container.on('click', function(e) {
+            if( $(e.target).closest('.modal_child').length == 0 ) {
+                
+                $('.modal_child').fadeOut(function() {
+                    container.fadeOut();
+                });
+            }
         });
     };
 
@@ -100,6 +109,8 @@ app.popup = (function() {
 
 
     var _initHandlers = function() {
+
+
         callback.on('click', function() {
            var c = new Call( '.popup_callback' );
            c.show();
