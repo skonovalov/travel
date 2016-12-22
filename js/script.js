@@ -89,7 +89,7 @@ app.popup = (function() {
 
     Popup.prototype.hide = function() {
         $('.modal_close').on('click', function() {
-            $(this).parent.fadeOut(function() {
+            $(this).parent().fadeOut(function() {
                 container.fadeOut();
             });
         });
