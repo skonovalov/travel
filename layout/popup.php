@@ -1,6 +1,6 @@
 <?php
-echo '<div class="popup">
-		<div class="popup_callback popup_same modal">
+echo '<div class="modal">
+		<div class="popup_callback popup_same">
 			<span class="icon-close"></span>
 			<article>Заказать обратный звонок</article>
 			<form action="">
@@ -17,7 +17,7 @@ echo '<div class="popup">
 			</form>
 		</div>
 
-	<div class="popup_thx popup_same modal">
+	<div class="popup_thx popup_same">
 		<span class="icon-close"></span>
 		<article>Спасибо!</article>
 		<p>Спасибо, что заказали обратный звонок. наш менджер свяжется с Вами в течении нескольких минут.</p>
@@ -25,7 +25,7 @@ echo '<div class="popup">
 	</div>
 
 
-	<div class="popup_tour modal">
+	<div class="popup_tour">
 		<article>Заказать индивидуальный тур</article>
 		<div class="selection-selects">
 			<select name="podbor-transport" id="podbor-transport">

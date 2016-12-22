@@ -70,7 +70,7 @@ function selectActiveMenu() {
 
 app.popup = (function() {
 
-    var container    = $('.popup'),
+    var container    = $('.modal'),
         enterCabinet = $('.enter-cabinet'),
         callback     = $('.callback');
 
