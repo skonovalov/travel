@@ -151,18 +151,12 @@
 										<option value="Excursion package 1">Excursion package 1</option>
 										<option value="Excursion packages 2">Excursion packages 2</option>
 									</select>
-									<div class="selectBox-city">
-										<div class="selectBox-city-btn">
-											<span class="icon-arrow-down"></span>
-										</div>
-										<article>Moscow</article>
-										<ul>
-											<li>Moscow</li>
-											<li>St.Petersburg</li>
-											<li>Novgorod</li>
-										</ul>
-										<input type="hidden" id="tour-city" name="tour-city" value="">
-									</div>
+									<select name="" id="" class="selectBox-city">
+										<option value="hide">Moscow</option>
+										<option value="Moscow">Moscow</option>
+										<option value="St.Petersburg">St.Petersburg</option>
+										<option value="Novgorod">Novgorod</option>
+									</select>
 								</div>
 								<div class="tours-form-right">
 									<div class="checkBox">
@@ -170,7 +164,7 @@
 										<label for="tour-day1">1 day tour</label>
 									</div>
 									<div class="checkBox">
-										<input type="hidden" id="tour-day2" name="tour-days">
+										<input type="radio" id="tour-day2" name="tour-days">
 										<label for="tour-day2">2 day tour</label>
 										
 									</div>
