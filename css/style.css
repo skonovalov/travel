@@ -183,6 +183,7 @@ table {
   font-size: 13px;
 }
 .popup_tour {
+  display: none;
   width: 541px;
   height: 800px;
   margin: 0 auto;

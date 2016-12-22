@@ -83,7 +83,7 @@ app.popup = (function() {
         console.log(self);
 
         container.show(function() {
-            self.name.show();
+            self.name.fadeIn();
         }); 
     };
 
@@ -91,7 +91,7 @@ app.popup = (function() {
         var self = this;
 
         this.name.hide(function() {
-            container.hide();
+            container.fadeOut();
         });
     };
 
