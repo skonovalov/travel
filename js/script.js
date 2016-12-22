@@ -80,6 +80,7 @@ app.popup = (function() {
 
     Popup.prototype.show = function() {
         var self = this;
+        console.log(self);
 
         container.show(function() {
             self.name.show();
