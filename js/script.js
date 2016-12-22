@@ -132,97 +132,51 @@ app.popup = (function() {
 
 app.selectBox = (function() {
 
-    function _openBox(elem) {
-        elem.css({
-                'border': '2px solid #d5d5d5',
-                'border-bottom': '1px',
-                'border-bottom-left-radius': '0'
-            })
-            .children('ul')
-            .show()
-            .css({
-            'height': '70px',
-        })
-    }
+    $('select').each(function(){
+        var $this = $(this), numberOfOptions = $(this).children('option').length;
+    
+        $this.addClass('select-hidden'); 
+        $this.wrap('<div class="select"></div>');
+        $this.after('<div class="select-styled"></div>');
 
-    function _openBoxCity(elem) {
-        elem.css({
-                'border': '2px solid #d5d5d5',
-                'border-bottom': '1px',
-                'border-bottom-left-radius': '0'
-            })
-            .children('ul')
-            .show()
-            .css({
-            'height': '105px',
-        })
-    }
-
-    function _closeBox(elem) {
-        elem.css({
-            'height': '0px',
-            'left': '-2px'
-            })
-             .hide()
-             .parent()
-             .css({
-                'border': '1px solid #d5d5d5',
-                'border-radius': '5px',
-                'border-top-right-radius': '0',
-                'border-bottom-right-radius': '0'
-             });
-    }
-
-
-    function _setPackage(elem) {
-        if( !elem.hasClass('chosen-package')) {
-            $('.chosen-package').removeClass('chosen-package');
-            elem.addClass('chosen-package');
-            elem.parent().siblings('article').html( elem.html() );
+        var $styledSelect = $this.next('div.select-styled');
+        $styledSelect.text($this.children('option').eq(0).text());
+    
+        var $list = $('<ul />', {
+            'class': 'select-options'
+        }).insertAfter($styledSelect);
+    
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
         }
-
-       _closeBox( elem.parent() );
-       elem.parent().siblings('input').val( elem.html() );
-    }
-
-    function _setPackageCity(elem) {
-        if( !elem.hasClass('chosen-city')) {
-            $('.chosen-city').removeClass('chosen-city');
-            elem.addClass('chosen-city');
-            elem.parent().siblings('article').html( elem.html() );
-        }
-
-       _closeBox( elem.parent() );
-       elem.parent().siblings('input').val( elem.html() );
-    }
-
-    function _initHandlers() {
-        $('.selectBox').on('click', function() {
-            _openBox( $(this) );
-        });
-
-        $('.selectBox ul li').on('click', function(e) {
+    
+        var $listItems = $list.children('li');
+    
+        $styledSelect.click(function(e) {
             e.stopPropagation();
-
-            _setPackage( $(this) );
+            $('div.select-styled.active').not(this).each(function(){
+                $(this).removeClass('active').next('ul.select-options').hide();
+            });
+            $(this).toggleClass('active').next('ul.select-options').toggle();
         });
-
-        $('.selectBox-city').on('click', function() {
-            _openBoxCity( $(this) );
-        });
-
-        $('.selectBox-city ul li').on('click', function(e) {
+    
+        $listItems.click(function(e) {
             e.stopPropagation();
-
-            _setPackageCity( $(this) );
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('rel'));
+            $list.hide();
+            //console.log($this.val());
         });
-    }
+    
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
 
-    return {
-        init: function() {
-            _initHandlers();
-        }
-    };
+    });
 })();
 
 
