@@ -1431,7 +1431,7 @@ blockquote {
   float: right;
   width: 100px;
 }
-.selectBox {
+.select {
   width: 182px;
   height: 35px;
   border: 1px solid #d5d5d5;
@@ -1442,18 +1442,11 @@ blockquote {
   position: relative;
   cursor: default;
 }
-.selectBox .selectBox-city-btn {
-  top: -1px;
+.select select {
+  display: none;
+  visibility: hidden;
 }
-.selectBox article {
-  padding-left: 19px;
-  font-family: fregat;
-  font-size: 14px;
-  color: #a9a9a9;
-  height: 35px;
-  line-height: 35px;
-}
-.selectBox ul {
+.select ul {
   height: 0;
   display: none;
   position: absolute;
@@ -1468,16 +1461,16 @@ blockquote {
   border-top: 1px solid #d5d5d5;
   border-bottom-left-radius: 5px;
 }
-.selectBox ul li {
+.select ul li {
   height: 35px;
   line-height: 35px;
   padding-left: 19px;
   border-bottom: 1px solid #d5d5d5;
 }
-.selectBox ul li:last-child {
+.select ul li:last-child {
   border-bottom: none;
 }
-.selectBox ul .chosen-package {
+.select ul .chosen-package {
   background: #f3f3f3;
   color: #942a8f;
 }
