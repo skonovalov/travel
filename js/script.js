@@ -37,6 +37,8 @@ function preparePage() {
 
     if( $('.slider-wrap').length > 0) {
         $('.slider-wrap').slick({
+           autoplay: ture,
+           autoplaySpeed: 5000, 
            dots: true,
            inifinite: true,
            speed: 600
