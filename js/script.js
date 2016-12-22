@@ -71,7 +71,7 @@ function selectActiveMenu() {
 app.popup = (function() {
 
     var container    = $('.modal'),
-        enterCabinet = $('.enter-cabinet'),
+        createTour   = $('.create-tour'),
         callback     = $('.callback');
 
     function Popup(name) {
@@ -115,6 +115,12 @@ app.popup = (function() {
            var c = new Call( '.popup_callback' );
            c.show();
            c.hide();
+        });
+
+        createTour.on('click', function() {
+           var t = new Call( '.popup_tour' );
+           t.show();
+           t.hide();
         });
     };
 
