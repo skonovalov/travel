@@ -114,6 +114,7 @@ app.popup = (function() {
         callback.on('click', function() {
            var c = new Call( '.popup_callback' );
            c.show();
+           c.hide();
         });
     };
 
