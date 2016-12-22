@@ -95,7 +95,7 @@ app.popup = (function() {
         });
     };
 
-    function Call() { Popup.apply(this.arguments); }
+    function Call() { Popup.apply(this, arguments); }
     Call.prototype = Object.create(Popup.prototype);
 
 
