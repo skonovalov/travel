@@ -26,7 +26,6 @@ function preparePage() {
 
     if( $('.tours-form').length > 0 || $('.podbor').length > 0){
         app.selectBox.init();
-        app.checkBox.init();
     } 
 
 
@@ -224,71 +223,6 @@ app.selectBox = (function() {
             _initHandlers();
         }
     };
-})();
-
-
-
-app.checkBox = (function() {
-
-    function _setValue(elem) {
-        if( !elem.hasClass('checked')) {
-
-            $('.checked').children('input').val('')
-                         .end()   
-                         .removeClass('checked');
-
-            elem.addClass('checked');
-        }
-
-        elem.children('input').val( elem.children('label').html() );
-    }
-
-
-    function _initHandlers() {
-        $('.checkBox').on('click', function() {
-            _setValue( $(this) );
-        });
-    }
-
-    return {
-        init: function() {
-            _initHandlers();
-        }
-    };
-})();
-
-/* end callback */
-
-app.tour = (function() {
-
-    function _hideTour() {
-        $('.popup-tour').fadeOut();
-
-    }
-
-    function _showTour() {
-        $('.popup-tour').fadeIn();
-    }
-
-    function _initHandler() {
-        $('.create-tour').on('click', function() {
-            _showTour();
-        });
-
-        $('.popup-tour-inner button').on('click', function(e) {
-            e.stopPropagation();
-
-            _hideTour() ;
-        })
-    }
-
-    return {
-        init: function() {
-             _hideTour();
-            _initHandler();
-        }
-    }
-
 })();
 
 
