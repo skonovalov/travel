@@ -25,7 +25,7 @@ function preparePage() {
 
 
     if( $('.tours-form').length > 0 || $('.podbor').length > 0){
-        app.selectBox.init();
+        app.selectBox();
     } 
 
 
